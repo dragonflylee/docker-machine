@@ -1,0 +1,3 @@
+[submodule "vendor/github.com/machine-drivers/docker-machine-driver-vmware"]
+	path = vendor/github.com/machine-drivers/docker-machine-driver-vmware
+	url = https://github.com/dragonflylee/docker-machine-driver-vmware.git

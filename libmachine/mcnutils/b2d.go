@@ -21,7 +21,7 @@ import (
 )
 
 const (
-	defaultURL            = "https://api.github.com/repos/boot2docker/boot2docker/releases"
+	defaultURL            = "https://api.github.com/repos/dragonflylee/boot2docker/releases"
 	defaultISOFilename    = "boot2docker.iso"
 	defaultVolumeIDOffset = int64(0x8028)
 	versionPrefix         = "-v"

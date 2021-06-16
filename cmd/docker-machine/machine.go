@@ -29,6 +29,7 @@ import (
 	"github.com/docker/machine/libmachine/drivers/plugin/localbinary"
 	"github.com/docker/machine/libmachine/log"
 	"github.com/docker/machine/version"
+	"github.com/machine-drivers/docker-machine-driver-vmware/pkg/drivers/vmware"
 )
 
 var AppHelpTemplate = `Usage: {{.Name}} {{if .Flags}}[OPTIONS] {{end}}COMMAND [arg...]
@@ -197,6 +198,8 @@ func runDriver(driverName string) {
 		plugin.RegisterDriver(vmwarevcloudair.NewDriver("", ""))
 	case "vmwarevsphere":
 		plugin.RegisterDriver(vmwarevsphere.NewDriver("", ""))
+	case "vmware":
+		plugin.RegisterDriver(vmware.NewDriver("", ""))
 	default:
 		fmt.Fprintf(os.Stderr, "Unsupported driver: %s\n", driverName)
 		os.Exit(1)
